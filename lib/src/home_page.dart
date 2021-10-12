@@ -9,6 +9,12 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('List Todo\'s'),
       ),
+      body: ListView.builder(
+        itemCount: 10,
+        itemBuilder: (context, index) {
+          return ListTile(title: Text('item $index'));
+        },
+      ),
     );
   }
 }
